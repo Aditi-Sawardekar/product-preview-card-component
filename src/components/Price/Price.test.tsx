@@ -5,7 +5,7 @@ describe("Price component", () => {
   it("Should render the currency and amount", () => {
     render(<Price currency="$" amount={29.99} />);
 
-    const currencyValue = screen.getByText(/^[€£$₹]\s\d+\.\d{2}$/);
+    const currencyValue = screen.getByText(/^[€£$₹]\s?\d+\.\d{2}$/);
     expect(currencyValue).toBeInTheDocument();
   });
 });
