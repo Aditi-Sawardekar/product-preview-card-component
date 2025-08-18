@@ -1,10 +1,28 @@
 import Price from "../Price/Price";
 
-export default function CardPrice() {
+interface CardPriceProps {
+  currency: string;
+  discountedPrice: number;
+  originalPrice: number;
+}
+
+export default function CardPrice({
+  currency,
+  discountedPrice,
+  originalPrice,
+}: CardPriceProps) {
   return (
     <>
-      <Price currency="$" amount={149.99} aria-label="Discounted price" />
-      <Price currency="$" amount={169.99} aria-label="Original price" />
+      <Price
+        currency={currency}
+        amount={discountedPrice}
+        aria-label="Discounted price"
+      />
+      <Price
+        currency={currency}
+        amount={originalPrice}
+        aria-label="Original price"
+      />
     </>
   );
 }

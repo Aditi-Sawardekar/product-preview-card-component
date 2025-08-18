@@ -3,7 +3,9 @@ import CardPrice from "./CardPrice";
 
 describe("CardPrice", () => {
   it("Should render the discounted and original price with correct aria-labels", () => {
-    render(<CardPrice />);
+    render(
+      <CardPrice currency="$" discountedPrice={149.99} originalPrice={169.99} />
+    );
 
     const discountedPrice = screen.getByLabelText(/discounted price/i);
     expect(discountedPrice).toHaveTextContent(/\$\s?149\.99/);
