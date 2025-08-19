@@ -5,12 +5,14 @@ import CardImage from "../CardImage/CardImage";
 import CardPrice from "../CardPrice/CardPrice";
 import CardTitle from "../CardTitle/CardTitle";
 
+import productImg from "../../assets/images/image-product-mobile.jpg";
+
 export default function ProductCard() {
   return (
     <>
       <h2>Product Card</h2>
       <CardImage
-        src="src\assets\images\image-product-mobile.jpg"
+        src={productImg}
         alt="Image of Gabrielle Essence Eau De Parfum"
       />
       <CardCategory category="perfume" />
