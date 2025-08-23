@@ -6,23 +6,32 @@ import CardPrice from "../CardPrice/CardPrice";
 import CardTitle from "../CardTitle/CardTitle";
 
 import productImg from "../../assets/images/image-product-mobile.jpg";
+import styles from "./ProductCard.module.css";
 
 export default function ProductCard() {
   return (
-    <>
-      <h2>Product Card</h2>
-      <CardImage
-        src={productImg}
-        alt="Image of Gabrielle Essence Eau De Parfum"
-      />
-      <CardCategory category="perfume" />
-      <CardTitle title="Gabrielle Essence Eau De Parfum" />
-      <CardDescription
-        description="A floral, solar and voluptuous interpretation composed by Olivier Polge,
+    <section className={styles.cardContainer}>
+      <section className={styles.imageSection}>
+        <CardImage
+          src={productImg}
+          alt="Image of Gabrielle Essence Eau De Parfum"
+        />
+      </section>
+
+      <section className={styles.contentSection}>
+        <CardCategory category="perfume" />
+        <CardTitle title="Gabrielle Essence Eau De Parfum" />
+        <CardDescription
+          description="A floral, solar and voluptuous interpretation composed by Olivier Polge,
       perfumer-creator for the house of Chanel."
-      />
-      <CardPrice currency="$" discountedPrice={149.99} originalPrice={169.99} />
-      <CardButton label="Add to Cart" />
-    </>
+        />
+        <CardPrice
+          currency="$"
+          discountedPrice={149.99}
+          originalPrice={169.99}
+        />
+        <CardButton label="Add to Cart" />
+      </section>
+    </section>
   );
 }
