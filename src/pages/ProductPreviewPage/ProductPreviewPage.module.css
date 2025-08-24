@@ -3,4 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  padding: 0.78125rem;
+  min-height: 100vh;
 }
