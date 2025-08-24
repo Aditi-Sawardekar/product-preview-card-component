@@ -1,8 +1,7 @@
 .cardContainer {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  max-width: 21.875rem;
+  max-width: 21.875rem; /*350px*/
   width: 100%;
   margin-top: 5rem;
 }
@@ -16,4 +15,23 @@
   padding: 2rem;
   border-radius: 0 0 0.5rem 0.5rem;
   background-color: hsl(0, 0%, 100%);
+}
+
+@media screen and (min-width: 768px) {
+  .cardContainer {
+    flex-direction: row;
+    max-width: 37.5rem; /*600px*/
+    height: auto;
+  }
+
+  .imageSection {
+    width: 50%;
+    height: auto;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  .contentSection {
+    width: 50%;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
 }
